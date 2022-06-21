@@ -1,3 +1,3 @@
-module github.com/grendeloz/adamago/xml
+module github.com/adamajava/adamago/xml
 
-go 1.17
+go 1.18

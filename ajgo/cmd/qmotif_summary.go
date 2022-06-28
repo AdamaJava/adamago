@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-    ajxml "github.com/adamajava/adamago/xml"
+	ajxml "github.com/adamajava/adamago/xml"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

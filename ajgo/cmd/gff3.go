@@ -7,7 +7,7 @@ import (
 // gff3Cmd is a submode which is a collection of sub-submodes
 var gff3Cmd = &cobra.Command{
 	Use:   "gff3",
-	Short: "operations on GFF3 files",
+	Short: "Operations on GFF3 files",
 	Long: `
 Operations on GFF3 files. Note that these are generic operations and
 there may be more specific submodes elsewhere in ajgo that work on

@@ -123,6 +123,8 @@ github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+
 github.com/googleapis/gax-go/v2 v2.0.4/go.mod h1:0Wqv26UfaUD9n4G6kQubkQ+KchISgw+vpHVxEJEs9eg=
 github.com/googleapis/gax-go/v2 v2.0.5/go.mod h1:DWXyrwAJ9X0FpwwEdw+IPEYBICEFu5mhpdKc/us6bOk=
 github.com/googleapis/google-cloud-go-testing v0.0.0-20200911160855-bcd43fbb19e8/go.mod h1:dvDLG8qkwmyD9a/MJJN3XJcT3xFxOKAvTZGvuZmac9g=
+github.com/grendeloz/interval v1.1.0 h1:ovCM2TRekyK5NHXRUCZ5M+YlAteG+wOpHaqioEXyXZY=
+github.com/grendeloz/interval v1.1.0/go.mod h1:oWlkBxqXFw6g7Aw/8rvVJ4P6iRp4BkPWWbzSmCtXhV4=
 github.com/grendeloz/ngs/genome v0.0.0-20220430001818-1aed29387369 h1:MheNIC7Il2Y8poSyK2k/SZehQxhGzDxR0VxqvoW9hCs=
 github.com/grendeloz/ngs/genome v0.0.0-20220430001818-1aed29387369/go.mod h1:wzg1AJJsSrmn/Hab6KGPM8jPQLX7RQkc6TQ5fyR4Yw8=
 github.com/grendeloz/runp v0.0.0-20220410013920-a2aedaa41c81 h1:BYdzvmOWZRuhukZhKo8AXD2YurRWhQhgv4cHE6s9UNQ=

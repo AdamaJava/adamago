@@ -14,6 +14,7 @@ require (
 
 require (
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
+	github.com/grendeloz/interval v1.1.0 // indirect
 	github.com/grendeloz/runp v0.0.0-20220410013920-a2aedaa41c81 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect

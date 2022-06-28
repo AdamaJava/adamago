@@ -1,3 +1,6 @@
+# This root-level .gitignore applies to all subdirectories of this repo
+# so it should only be used for things that are truly universal.
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -13,6 +16,3 @@
 
 # VIM temp files
 *.swp
-
-# Binaries
-ajgo

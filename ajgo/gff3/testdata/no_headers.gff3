@@ -1,0 +1,6 @@
+1	GRCh37	chromosome	1	249250621	.	.	.	ID=chromosome:1;Alias=CM000663.1,NC_000001.10
+1	cpg	biological_region	10469	11240	1.3e+03	.	.	external_name=oe %3D 0.79;logic_name=cpg
+1	Eponine	biological_region	10650	10657	0.999	+	.	logic_name=eponine
+1	Eponine	biological_region	10656	10658	0.999	-	.	logic_name=eponine
+1	Eponine	biological_region	10678	10687	0.999	+	.	logic_name=eponine
+1	Eponine	biological_region	10682	10689	0.999	-	.	logic_name=eponine

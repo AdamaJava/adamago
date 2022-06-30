@@ -6,4 +6,5 @@
 ajgo
 tmp
 *.log
+*.tsv
 jp*

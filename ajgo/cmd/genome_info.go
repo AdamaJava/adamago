@@ -1,12 +1,5 @@
 package cmd
 
-// We will write out in GFF3 format http://gmod.org/wiki/GFF3.
-// This requires that column 3 contain a SOFA term or accession.
-//
-// Using the Sequence Ontology Browser, we found that there is a SO term
-// for regions of N's. The term is N_region and the accession is SO:0001835
-// http://www.sequenceontology.org/browser/current_release/term/SO:0001835
-
 import (
 	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
@@ -17,8 +10,8 @@ import (
 // submode genome > info
 var genomeInfoCmd = &cobra.Command{
 	Use:   "info",
-	Short: "write info from a serialised genome",
-	Long:  `For an ajgo serialised genome, write out key metrics.`,
+	Short: "describe a serialised genome",
+	Long:  `For an ajgo serialised genome, write out key info.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmdh.StartLogging()
 		genomeInfoCmdRun(cmd, args)
@@ -32,10 +25,6 @@ func init() {
 	genomeInfoCmd.Flags().StringVar(&flagInfileGenome, "in-genome", "",
 		"ajgo serialised genome")
 	genomeInfoCmd.MarkFlagRequired("in-genome")
-
-	//genomeInfoCmd.Flags().StringVar(&flagOutfile, "outfile", "",
-	//	"output file")
-	//genomeInfoCmd.MarkFlagRequired("outfile")
 }
 
 func genomeInfoCmdRun(cmd *cobra.Command, args []string) {

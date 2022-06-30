@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -41,9 +42,9 @@ reference.
   11_11__111      seed - 5 matches, 2 mismatches
  11_11__111       seed - 5 matches, 2 mismatches`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		createSeedCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

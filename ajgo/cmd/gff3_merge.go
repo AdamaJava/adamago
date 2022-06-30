@@ -1,10 +1,12 @@
 package cmd
 
 import (
-	"ajgo/gff3"
 	"fmt"
 	"strconv"
 
+	"ajgo/gff3"
+
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -13,10 +15,11 @@ import (
 var gff3MergeCmd = &cobra.Command{
 	Use:   "merge",
 	Short: "merge and consolidate multiple GFF3 files",
-	Long: `Read two or more GFF3 files, consolidate records within each
-GFF3 and them sequentially merge them in the order they were specified
-on the command line, i.e. the second GFF3 is merged onto the first and
-then any subsequent GFF3s are merged one at a time onto the new composite.
+	Long: `
+Read two or more GFF3 files, consolidate records within each GFF3 and
+sequentially merge them in the order they were specified on the command
+line, i.e. the second GFF3 is merged onto the first and then any
+subsequent GFF3s are merged one at a time onto the new composite.
 
 This mode does not make use of any information from the individual
 Feature records apart from the SeqId, Type, Start and End. The Start
@@ -42,9 +45,9 @@ For a more detailed explanation of both simple and prudent merging, run
 Depending on your use case, the gff3 > select mode may be helpful
 before or after the merge.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		gff3MergeCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

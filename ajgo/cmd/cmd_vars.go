@@ -1,3 +1,5 @@
+// Copyright (c) QIMR Berghofer Medical Research Institute
+
 // This file collects package globals used as commandline flags.
 // Centralising this list helps us maintain a consistent naming scheme
 // and facilitates reuse of flags wherever possible rather than creating

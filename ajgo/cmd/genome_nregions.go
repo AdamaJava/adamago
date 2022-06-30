@@ -13,6 +13,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -25,9 +26,9 @@ var genomeNregionsCmd = &cobra.Command{
 	Long: `For an ajgo serialised genome, identify all contiguous runs
 of N bases and output to a GFF3 file.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genomeNregionsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"strings"
 
-	//gh "github.com/grendeloz/go-header"
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -42,9 +42,9 @@ regions. Both of these parameters have defaults. The minimum size for
 region length is important otherwise the GFF3 report can become noisy
 with very short regions.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		qpileupLowmapqCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

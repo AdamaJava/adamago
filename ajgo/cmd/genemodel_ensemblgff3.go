@@ -1,3 +1,5 @@
+// Copyright (c) QIMR Berghofer Medical Research Institute
+
 package cmd
 
 import (

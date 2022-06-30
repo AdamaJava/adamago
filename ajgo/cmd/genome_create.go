@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -14,9 +15,9 @@ var createGenomeCmd = &cobra.Command{
 go encoding/gob binary format. This binary format is required by most other
 ajgo modes that use a genome.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		createGenomeCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

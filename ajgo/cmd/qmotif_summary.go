@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	ajxml "github.com/adamajava/adamago/xml"
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -18,8 +19,9 @@ var qmotifXmlFile string
 var qmotifSummaryCmd = &cobra.Command{
 	Use:   "summary",
 	Short: "print summary values from qmotif XML files",
-	Long: `Parse qmotif XML files and write out parameters from the summary
-section. The values are written as a single tab-separated line.
+	Long: `
+Parse qmotif XML files and write out parameters from the summary section.
+The values are written as a single tab-separated line.
 
 Note that qmotif must NOT have been run in includes-only mode. The INI
 file can have the includes defined (which will trigger reporting for the
@@ -57,9 +59,9 @@ be the full pathname of the BAM as it was when qmotif was run against
 it.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		summaryQmotifCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

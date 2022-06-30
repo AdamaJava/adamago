@@ -3,6 +3,8 @@ package cmd
 import (
 	"ajgo/gff3"
 	"ajgo/selector"
+
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -26,9 +28,9 @@ For a general description of selectors, see
     ajgo selector --help
 `,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genemodelEnsemblGff3SelectCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

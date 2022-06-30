@@ -7,6 +7,7 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -18,9 +19,9 @@ var genomeHomopolymerStatsCmd = &cobra.Command{
 	Short: "analyse homopolymers in genome",
 	Long:  `Tally count of homopolymers by length and type (e.g.  AAAAAA).`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genomeHomopolymerStatsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

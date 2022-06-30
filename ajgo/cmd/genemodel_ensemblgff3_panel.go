@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"ajgo/gff3"
+
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"regexp"
@@ -14,9 +16,9 @@ var genemodelEnsemblGff3PanelCmd = &cobra.Command{
 	Long: `Read a GFF3 file and only keep features related to a list of
 gene names or ids read from a file. Write out the derived GFF3 file.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genemodelEnsemblGff3PanelCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

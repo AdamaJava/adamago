@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"ajgo/gtf"
+
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -17,9 +19,9 @@ var genemodelStatsCmd = &cobra.Command{
 	Short: "derive stats from gene model",
 	Long:  `Write report statistics derived from a gene model.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genemodelStatsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

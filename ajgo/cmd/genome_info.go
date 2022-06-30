@@ -8,6 +8,7 @@ package cmd
 // http://www.sequenceontology.org/browser/current_release/term/SO:0001835
 
 import (
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -19,9 +20,9 @@ var genomeInfoCmd = &cobra.Command{
 	Short: "write info from a serialised genome",
 	Long:  `For an ajgo serialised genome, write out key metrics.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genomeInfoCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

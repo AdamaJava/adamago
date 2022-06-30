@@ -1,7 +1,10 @@
+// Copyright (c) QIMR Berghofer Medical Research Institute
+
 package cmd
 
 import (
 	"ajgo/gff3"
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -15,9 +18,9 @@ have at least one element with a Type of cds.  Extract the CDS elements
 and consolidate within the groupings.cdsand only keep features related to a list of
 gene names or ids read from a file. Write out the derived GFF3 file.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genemodelEnsemblGff3GeneCdsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"ajgo/gtf"
+
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -15,9 +17,9 @@ that are not chromosomes or GLxxxxx are removed, duplicate exons (from
 multiple transcripts are removed), and where exons overlap they are
 consolidated into a single feature that spans the overlapping exons.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		genemodelExonsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 
-	//gh "github.com/grendeloz/go-header"
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -35,7 +35,8 @@ var (
 var qpileupReaddepthCmd = &cobra.Command{
 	Use:   "read-depth",
 	Short: "identifies regions of unusual read-depth",
-	Long: `Takes one or more qpileup view files and looks for regions
+	Long: `
+Takes one or more qpileup view files and looks for regions
 that have read depths above or below a specified threshold. The qpileup
 view reports must be of a particular format and all inputs will be 
 checked that they have the required columns in the required order.
@@ -45,9 +46,9 @@ positions will be reported) and a minimum reportable length for the
 regions. The minimum size for region length is important otherwise
 the GFF3 report can become noisy with very short regions.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		qpileupReaddepthCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

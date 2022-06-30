@@ -9,6 +9,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -40,7 +41,7 @@ func gffHeaderFromRunParameters() string {
 // gffHeadersFromRunParameters returns a multi-line string that captures
 // run parameters.
 func gffHeadersFromRunParameters() []string {
-	run := NewRunParameters()
+	run := cmdh.NewRunParameters()
 	return []string{
 		"##uuid " + uuid.New().String(),
 		"##version " + run.Version,

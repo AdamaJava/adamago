@@ -38,8 +38,6 @@ cloud.google.com/go/storage v1.14.0/go.mod h1:GrKmX003DSIwi9o29oFT7YDnHYwZoctc3f
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
-github.com/adamajava/adamago v0.0.0-20220621053836-b68b126f084b h1:IBLzUJ8x02Ze6Gs+sZFaRfm3El3MnBx+et+li+GDNXY=
-github.com/adamajava/adamago v0.0.0-20220621053836-b68b126f084b/go.mod h1:NfVYCBlUvLTQiIUfCln0ViOUVN8m0VoxrJuKFPGNNYU=
 github.com/adamajava/adamago v0.0.0-20220627225636-bc6b88cb683f h1:SqWYCE403LaqxWXK1B3wENJ3NRYD2XBc6i/nKEHMhpI=
 github.com/adamajava/adamago v0.0.0-20220627225636-bc6b88cb683f/go.mod h1:NfVYCBlUvLTQiIUfCln0ViOUVN8m0VoxrJuKFPGNNYU=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
@@ -123,6 +121,8 @@ github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+
 github.com/googleapis/gax-go/v2 v2.0.4/go.mod h1:0Wqv26UfaUD9n4G6kQubkQ+KchISgw+vpHVxEJEs9eg=
 github.com/googleapis/gax-go/v2 v2.0.5/go.mod h1:DWXyrwAJ9X0FpwwEdw+IPEYBICEFu5mhpdKc/us6bOk=
 github.com/googleapis/google-cloud-go-testing v0.0.0-20200911160855-bcd43fbb19e8/go.mod h1:dvDLG8qkwmyD9a/MJJN3XJcT3xFxOKAvTZGvuZmac9g=
+github.com/grendeloz/cmdh v0.0.0-20220630030309-76a97337a1f8 h1:+6uIAig6bVtwW+snMkiGACYT60qEHzsJTJP+ouBHEZo=
+github.com/grendeloz/cmdh v0.0.0-20220630030309-76a97337a1f8/go.mod h1:x5E7jGUAG+SMZFUH0E6KjrhCniaO7lAcZQk1DgwdUs4=
 github.com/grendeloz/interval v1.1.0 h1:ovCM2TRekyK5NHXRUCZ5M+YlAteG+wOpHaqioEXyXZY=
 github.com/grendeloz/interval v1.1.0/go.mod h1:oWlkBxqXFw6g7Aw/8rvVJ4P6iRp4BkPWWbzSmCtXhV4=
 github.com/grendeloz/ngs/genome v0.0.0-20220430001818-1aed29387369 h1:MheNIC7Il2Y8poSyK2k/SZehQxhGzDxR0VxqvoW9hCs=

@@ -8,6 +8,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/grendeloz/cmdh"
 	"github.com/grendeloz/ngs/genome"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -22,9 +23,9 @@ code does not search the reverse complement so if you want the search to
 work on both strands, you should specify a second motif that matches the
 reverse complement.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		qmotifMotifCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

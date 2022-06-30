@@ -3,6 +3,7 @@ package cmd
 import (
 	"ajgo/gff3"
 
+	"github.com/grendeloz/cmdh"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -13,9 +14,9 @@ var gff3StatsCmd = &cobra.Command{
 	Short: "basic by-SeqId stats",
 	Long:  `Simple summary statistics by-SeqId for a GFF3.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		startLogging()
+		cmdh.StartLogging()
 		gff3StatsCmdRun(cmd, args)
-		finishLogging()
+		cmdh.FinishLogging()
 	},
 }
 

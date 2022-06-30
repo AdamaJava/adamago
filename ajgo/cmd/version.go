@@ -9,8 +9,8 @@ import (
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "print the gnqac version number",
-	Long:  `Print the gnqac version number and exit.`,
+	Short: "print the ajgo version number",
+	Long:  `Print the ajgo version number and exit.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Printf("%s %s\n", cmdh.Tool(), cmdh.Version())
 	},

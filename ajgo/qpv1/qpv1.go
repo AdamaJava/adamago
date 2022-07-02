@@ -16,7 +16,9 @@ import (
 	"fmt"
 	"os"
 	"regexp"
-    "strings"
+	"strings"
+
+    log "github.com/sirupsen/logrus"
 )
 
 // These are convenience constants for referencing fields within a
@@ -69,8 +71,9 @@ func ExpectedHeaderFields() []string {
 		`HighNonreference_rev`, `LowReadCount_rev`}
 }
 
-func ExpectedHeader() string {
-	return `## ` + strings.Join(ExpectedHeaderFields(), "\t")
+func ExpectedHeaderLine() string {
+	// Note that this string includes the newline
+	return `## ` + strings.Join(ExpectedHeaderFields(), "\t") + "\n"
 }
 
 // CheckFileHeader reads the header (comments) from the top of a file
@@ -108,14 +111,15 @@ func CheckFileHeader(file string) error {
 
 	// Unnecessary but explicit
 	scanner.Split(bufio.ScanLines)
-	expected := ExpectedHeader()
+	expected := ExpectedHeaderLine()
 
 	// Scan forward through all lines starting with '#'. If we get a
 	// match then we exit successfully, otherwise if we hit-non comment
 	// lines without getting a hit then we exit unsuccessfully.
-	if scanner.Scan() {
+	for scanner.Scan() {
 		line := scanner.Text()
 		if line[0:1] == `#` {
+            log.Info("Found header: ",line)
 			if line == expected {
 				return nil
 			}

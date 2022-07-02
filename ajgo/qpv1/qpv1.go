@@ -17,8 +17,6 @@ import (
 	"os"
 	"regexp"
 	"strings"
-
-    log "github.com/sirupsen/logrus"
 )
 
 // These are convenience constants for referencing fields within a
@@ -73,7 +71,7 @@ func ExpectedHeaderFields() []string {
 
 func ExpectedHeaderLine() string {
 	// Note that this string includes the newline
-	return `## ` + strings.Join(ExpectedHeaderFields(), "\t") + "\n"
+	return `## ` + strings.Join(ExpectedHeaderFields(), "\t")
 }
 
 // CheckFileHeader reads the header (comments) from the top of a file
@@ -119,11 +117,12 @@ func CheckFileHeader(file string) error {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if line[0:1] == `#` {
-            log.Info("Found header: ",line)
 			if line == expected {
 				return nil
 			}
-		}
+		} else {
+            break
+        }
 	}
 
 	// If we got here then we fell through without hitting the expected

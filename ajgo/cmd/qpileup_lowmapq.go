@@ -436,8 +436,8 @@ func makeLowMapqGffRecord(seq string, low, high, ctr, mapqTotal int) string {
 		`.`,
 		`.`,
 		`ID=lowmpaq` + strconv.Itoa(ctr) +
-			`;length=` + strconv.Itoa(high-low),
-		`;avgmapq=` + strconv.Itoa(avgmapq)}
+			`;length=` + strconv.Itoa(high-low) +
+			`;avgmapq=` + strconv.Itoa(avgmapq)}
 	line := strings.Join(gff3fields, "\t")
 	return line
 }

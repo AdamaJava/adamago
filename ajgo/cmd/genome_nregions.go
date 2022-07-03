@@ -144,8 +144,9 @@ func identifyNRegions(g *genome.Genome, file string) error {
 		if err != nil {
 			return err
 		}
+		seq := strings.TrimLeft(n[0], ">")
 		gff3fields := []string{
-			n[0],
+			seq,
 			`ajgo:n-regions`,
 			`N_region`,
 			n[1],

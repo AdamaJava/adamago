@@ -146,7 +146,7 @@ func writeHomopolymers(hp *HpTally, file string) error {
 
 	// Write
 	var tallys []string
-	tallys = append(tallys, fmt.Sprintf("Length\t%v)", strings.Join(bases, "\t")))
+	tallys = append(tallys, fmt.Sprintf("Length\t%v", strings.Join(bases, "\t")))
 	for _, l := range lengths {
 		t := fmt.Sprintf("%d", l)
 		for _, b := range bases {

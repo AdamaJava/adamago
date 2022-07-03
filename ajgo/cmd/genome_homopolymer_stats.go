@@ -127,34 +127,32 @@ func writeHomopolymers(hp *HpTally, file string) error {
 	w := bufio.NewWriter(f)
 	defer w.Flush()
 
-	// Write header
-	_, err = w.WriteString(strings.Join(
-		[]string{"Base", "Length", "Count"},
-		"\t") + "\n")
-	if err != nil {
-		return err
-	}
-
-	// Tallys out!
-
-	// Sort by base
+	// Sort by lengths and bases
 	var bases []string
-	for b, _ := range hp.Counts {
+	tmp := make(map[int]int)
+	for b, x := range hp.Counts {
 		bases = append(bases, b)
+		for l, _ := range x {
+			tmp[l]++
+		}
 	}
 	sort.Strings(bases)
 
+	var lengths []int
+	for l, _ := range tmp {
+		lengths = append(lengths, l)
+	}
+	sort.Ints(lengths)
+
+	// Write
 	var tallys []string
-	for _, b := range bases {
-		// Sort by length within base
-		var lengths []int
-		for l, _ := range hp.Counts[b] {
-			lengths = append(lengths, l)
+	tallys = append(tallys, fmt.Sprintf("Length\t%v)", strings.Join(bases, "\t")))
+	for _, l := range lengths {
+		t := fmt.Sprintf("%d", l)
+		for _, b := range bases {
+			t += fmt.Sprintf("\t%d", hp.Counts[b][l])
 		}
-		sort.Ints(lengths)
-		for _, l := range lengths {
-			tallys = append(tallys, fmt.Sprintf("%s\t%d\t%d", b, l, hp.Counts[b][l]))
-		}
+		tallys = append(tallys, t)
 	}
 
 	// Join and write regions lines

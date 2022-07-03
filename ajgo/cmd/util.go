@@ -43,13 +43,13 @@ func gffHeaderFromRunParameters() string {
 func gffHeadersFromRunParameters() []string {
 	run := cmdh.NewRunParameters()
 	return []string{
-		"##uuid " + uuid.New().String(),
-		"##version " + run.Version,
-		fmt.Sprintf("##creation-date %v", run.StartTime),
-		fmt.Sprintf("##created-by-user %s (%d)", run.UserName, run.UserId),
-		fmt.Sprintf("##created-by-group %s (%d)", run.GroupName, run.GroupId),
-		fmt.Sprintf("##created-on %s", run.HostName),
-		fmt.Sprintf("##invocation %v", run.Args),
+		"##uuid " + uuid.New().String() +"\n",
+		"##version " + run.Version +"\n",
+		fmt.Sprintf("##creation-date %v\n", run.StartTime),
+		fmt.Sprintf("##created-by-user %s (%d)\n", run.UserName, run.UserId),
+		fmt.Sprintf("##created-by-group %s (%d)\n", run.GroupName, run.GroupId),
+		fmt.Sprintf("##created-on %s\n", run.HostName),
+		fmt.Sprintf("##invocation %v\n", run.Args),
 	}
 }
 

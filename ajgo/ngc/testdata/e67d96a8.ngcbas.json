@@ -1,0 +1,204 @@
+{
+    "ngscheck": {
+        "reportUuid": "2ab3f1d6-537a-4f5f-a14d-88157c337504",
+        "runBy": "scottW",
+        "reportDate": "27 November 2020 13:15",
+        "version": "1.2.1",
+        "inputXmlFilename": "e67d96a8-15b4-49c7-a13e-75d40b11198b.bam.qp2.xml",
+        "outputPdfFilename": "e67d96a8-15b4-49c7-a13e-75d40b11198b.bam.qp2.xml.ngcbas.pdf",
+        "outputXmlFilename": "e67d96a8-15b4-49c7-a13e-75d40b11198b.bam.qp2.xml.ngcbas.xml"
+    },
+    "qprofiler2": {
+        "runBy": "scottW",
+        "startTime": "2020-09-20 14:12:52",
+        "finishTime": "2020-09-20 16:11:04",
+        "operatingSystem": "Linux",
+        "version": "23-8546a7b6",
+        "bamFilename": "e67d96a8-15b4-49c7-a13e-75d40b11198b.bam",
+        "bamMd5sum": "C3B5522954D27BC8F792D0FE3F00607A",
+        "bamReportUuid": "26085f9b-9d89-45c3-a872-5102089a8908"
+    },
+    "Scorecard": {
+        "Predicted Genome": [
+            "Human GRCh37",
+            ""
+        ],
+        "Predicted Assembled Molecules Matched": [
+            "25 of 25",
+            ""
+        ],
+        "Predicted Gender": [
+            "Female",
+            ""
+        ],
+        "Predicted Sequencing Type": [
+            "PE_150_150",
+            ""
+        ],
+        "Predicted Sequencing Platform": [
+            "",
+            ""
+        ],
+        "Predicted Tumour/Normal": [
+            "Normal",
+            ""
+        ],
+        "Q30 %": [
+            90.3,
+            "Pass"
+        ],
+        "Unmapped Read %": [
+            1.23,
+            "Pass"
+        ],
+        "Duplicate Read %": [
+            19.92,
+            "Pass"
+        ],
+        "Bases lost to analysis %": [
+            28.52,
+            "Warn1"
+        ],
+        "Not Proper Pair %": [
+            3.14,
+            "Pass"
+        ],
+        "Clipped %": [
+            1.45,
+            "Pass"
+        ],
+        "Overlap Bases %": [
+            2.77,
+            "Warn2"
+        ],
+        "Bases remaining for analysis": [
+            106659336327,
+            ""
+        ],
+        "Reference sequence total length from BAM header": [
+            3101804739,
+            ""
+        ],
+        "Average read depth": [
+            "34.4x",
+            ""
+        ],
+        "Number of cycles > 1% mismatches": [
+            "44 (of 300)",
+            "Pass"
+        ],
+        "Average mismatch % - first read in pair": [
+            0.62,
+            "Pass"
+        ],
+        "Average mismatch % - second read in pair": [
+            1.08,
+            "Pass"
+        ],
+        "Pearson correlation of read depth and GC Content": [
+            0.71,
+            "Warn3"
+        ]
+    },
+    "Execution Log - Warnings and Errors": {},
+    "Summary Metrics": {
+        "Average length of first-of-pair reads": 148,
+        "Average length of second-of-pair reads": 148,
+        "Discarded reads (FailedVendorQuality, secondary, supplementary)": 6851663,
+        "Total reads including discarded reads": 1001622567,
+        "Read Group Count": 1
+    },
+    "Base Quality": [
+        {
+            "Read": "First",
+            "Q10": 99.96,
+            "Q20": 97.98,
+            "Q30": 95.02,
+            "Q40": 79.82
+        },
+        {
+            "Read": "Second",
+            "Q10": 99.02,
+            "Q20": 93.33,
+            "Q30": 85.56,
+            "Q40": 64.02
+        }
+    ],
+    "Read group properties": [
+        {
+            "Read Group": "4d31d641-5656-483b-8f10-8d3963b44bf8",
+            "Read Count": 1001622567,
+            "Avg/Max Read Length": "148/150",
+            "Mode/Median TLEN": "353/394"
+        }
+    ],
+    "Bases Lost": [
+        {
+            "Read Group": "4d31d641-5656-483b-8f10-8d3963b44bf8",
+            "Unmapped Reads": 1.23,
+            "Duplicate Reads": 19.92,
+            "Not Proper Pairs": 3.14,
+            "Adaptor Trimming": 0.62,
+            "Soft Clipped": 0.83,
+            "Hard Clipped": 0.0,
+            "Overlap Bases": 2.77,
+            "Total Bases Lost": 28.52
+        },
+        {
+            "Read Group": "overall",
+            "Unmapped Reads": 1.23,
+            "Duplicate Reads": 19.92,
+            "Not Proper Pairs": 3.14,
+            "Adaptor Trimming": 0.62,
+            "Soft Clipped": 0.83,
+            "Hard Clipped": 0.0,
+            "Overlap Bases": 2.77,
+            "Total Bases Lost": 28.52
+        }
+    ],
+    "QNAME": [
+        {
+            "Read Group": "4d31d641-5656-483b-8f10-8d3963b44bf8",
+            "Instrument": "ST-E00152",
+            "Flow Cell Id": "H352YCCX2",
+            "Run Id": "487",
+            "Flow Cell Lane": "6",
+            "Tile Number": 96
+        }
+    ],
+    "Pairs": [
+        {
+            "Read Group": "4d31d641-5656-483b-8f10-8d3963b44bf8",
+            "Proper Inward": 75.46,
+            "Proper Outward": 0.25,
+            "Not Proper F3F5": 0.07,
+            "Not Proper F5F3": 0.07,
+            "Not Proper Inward": 0.25,
+            "Not Proper Outward": 0.2,
+            "Not Proper Other": 2.55,
+            "Total": 78.85
+        }
+    ],
+    "Gender Prediction": {
+        "Gender": "Female",
+        "Method": "density_peak_ratio",
+        "Threshold": 5,
+        "chrX Read Count": 39121154,
+        "chrY Read Count": 1331334,
+        "chrX Length": 155270560,
+        "chrY Length": 59373566,
+        "chrX chrY Read Ratio": 11.236437698673873,
+        "Reads Ratio Gender": "Female",
+        "chrX Density Peak": 251013.0909090909,
+        "chrY Density Peak": 808.5050505050506,
+        "chrX/chrY Peak Ratio": 310.46570550461007
+    },
+    "Read Depth": {
+        "GC Content Pearson correlation": 0.7145401169814246,
+        "Mean": 253084.45765973825,
+        "Standard deviation": 6073.361581803492,
+        "Quartile Coefficient of Dispersion": 0.01136034785963923,
+        "Autocorrelation": -0.020334135722990986,
+        "Coefficient of Variation": 0.023997370830131655
+    }
+}
